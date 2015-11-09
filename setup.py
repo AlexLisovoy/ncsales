@@ -1,11 +1,17 @@
 """Packaging settings."""
-
+import sys
+import re
 from codecs import open
 from os.path import abspath, dirname, join
-import re
+
 from setuptools import setup, find_packages
 
 
+# check python version
+if not sys.version_info >= (3, 5):
+    sys.exit("Sorry, but this tool can be used with Python 3.5 or more")
+
+# current path
 this_dir = abspath(dirname(__file__))
 
 # grab project version
@@ -19,7 +25,6 @@ with open(join(this_dir, 'ncsales', '__init__.py'), 'r', 'utf-8') as fp:
 # read long description
 with open(join(this_dir, 'README.md'), encoding='utf-8') as file:
     long_description = file.read()
-
 
 setup(
     name='ncsales',
