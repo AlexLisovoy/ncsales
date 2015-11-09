@@ -1,6 +1,41 @@
 # ncsales
 Test task for NCube
 
+## Installation
+
+Script can be installed by executing:
+
+    $ pip install -e git+https://github.com/AlexLisovoy/ncsales.git@master#egg=ncsales
+
+
+## Running script
+
+To run script execute:
+
+    $ ncsales path_to_file
+
+More info you can get by executing:
+
+    $ ncsales -h
+
+
+## Running test
+
+
+1. Clone repo from git:
+
+    $ git clone git@github.com:AlexLisovoy/ncsales.git
+
+2. Run test:
+
+    $ python setup.py test
+
+
+## Dependencies
+
+    Python 3.5+
+
+
 ## Task
 This coding project is a hypothetical scoring engine for sales leads. The goal
 of this exercise is understand what you consider production-quality code with a
@@ -28,7 +63,7 @@ per row in the file.
 In order to score a contact use the following algorithm:
 
   1. Event scores will first be weighted by type as follows:
-  
+
     * web = score * 1.0
     * email = score * 1.2
     * social = score * 1.5
